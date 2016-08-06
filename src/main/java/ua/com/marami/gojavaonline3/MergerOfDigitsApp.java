@@ -6,7 +6,7 @@ import ua.com.marami.gojavaonline3.view.Writer;
 
 public class MergerOfDigitsApp {
 
-	private static final String WELCOME = "Hello! It is the task #1 from the course \"GoJavaOnline3\". Now we will convert an integer array to String.";
+	private static final String WELCOME = "\nHello! It is the task #1 from the course \"GoJavaOnline3\". Now we will convert an integer array to String.";
 	private static final String ASK_LENGTH = "Length of array:";
 	private static final String ASK_NUMBERS = "Type numbers:";
 	private static final String OUR_RESULT = "Resulted String is:";
@@ -25,7 +25,7 @@ public class MergerOfDigitsApp {
 	public void run() {
 		welcome();
 		initializeArray();
-		intArrayToString();
+		resultedText = MyNumber.intArrayToString(numbers);
 		showResult();
 	}
 
@@ -43,11 +43,6 @@ public class MergerOfDigitsApp {
 			numbers[i] = reader.getInt();
 		}
 	}
-
-	private void intArrayToString() {
-		resultedText = MyNumber.intArrayToString(numbers);
-	}
-
 
 	private void showResult() {
 		writer.writeString(OUR_RESULT);
