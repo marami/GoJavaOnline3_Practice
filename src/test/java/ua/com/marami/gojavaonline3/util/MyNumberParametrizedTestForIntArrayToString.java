@@ -14,7 +14,7 @@ import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(value = Parameterized.class)
-public class MyNumberParametrizedTest {
+public class MyNumberParametrizedTestForIntArrayToString {
 
 	@Parameter
 	public int[] fInput;
