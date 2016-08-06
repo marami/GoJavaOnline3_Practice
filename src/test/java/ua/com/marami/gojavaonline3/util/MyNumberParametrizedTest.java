@@ -6,8 +6,10 @@ import org.junit.rules.Timeout;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Arrays;
+import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,13 +17,13 @@ import static org.junit.Assert.assertEquals;
 public class MyNumberParametrizedTest {
 
 	@Parameter
-	public int[] numbers;
+	public int[] fInput;
 
 	@Parameter(value = 1)
-	public String text;
+	public String fExpected;
 
-	@Parameterized.Parameters(name = "{index}: buy() is {1}")
-	public static Iterable<Object[]> getParametrizedData() {
+	@Parameters(name = "{index}: buy() is \"{1}\"")
+	public static Collection<Object[]> getParametrizedData() {
 		return Arrays.asList(new Object[][]{
 				{new int[]{1}, "1"},
 				{new int[]{1, 10, -2}, "110-2"},
@@ -36,7 +38,7 @@ public class MyNumberParametrizedTest {
 
 	@Test
 	public void testIntArrayToString() throws Exception {
-		assertEquals(text, MyNumber.intArrayToString(numbers));
+		assertEquals(fExpected, MyNumber.intArrayToString(fInput));
 	}
 
 }
