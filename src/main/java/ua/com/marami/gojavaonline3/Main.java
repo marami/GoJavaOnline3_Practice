@@ -11,7 +11,10 @@ public class Main {
         Reader reader = new ConsoleReader();
         Writer writer = new ConsoleWriter();
 
-        MergerOfDigitsApp task1 = new MergerOfDigitsApp(reader, writer);
-        task1.run();
+        MergerOfDigitsApp mergerOfDigitsApp = new MergerOfDigitsApp(reader, writer);
+        mergerOfDigitsApp.run();
+
+        SumOfDigits sumOfDigits = new SumOfDigits(reader, writer);
+        sumOfDigits.run();
     }
 }
