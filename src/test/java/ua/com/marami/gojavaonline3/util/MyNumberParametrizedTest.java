@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.rules.Timeout;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
 
 import java.util.Arrays;
 
@@ -13,16 +14,11 @@ import static org.junit.Assert.assertEquals;
 @RunWith(value = Parameterized.class)
 public class MyNumberParametrizedTest {
 
-	private int[] numbers = {1};
-	private String text;
+	@Parameter
+	public int[] numbers;
 
-	@Rule
-	public final Timeout globalTimeout = Timeout.seconds(1);
-
-	public MyNumberParametrizedTest(int[] numbers, String text) {
-		this.numbers = numbers;
-		this.text = text;
-	}
+	@Parameter(value = 1)
+	public String text;
 
 	@Parameterized.Parameters(name = "{index}: buy() is {1}")
 	public static Iterable<Object[]> getParametrizedData() {
@@ -34,6 +30,9 @@ public class MyNumberParametrizedTest {
 				{new int[]{Integer.MAX_VALUE, Integer.MIN_VALUE}, "2147483647-2147483648"}
 		});
 	}
+
+	@Rule
+	public final Timeout globalTimeout = Timeout.seconds(1);
 
 	@Test
 	public void testIntArrayToString() throws Exception {
