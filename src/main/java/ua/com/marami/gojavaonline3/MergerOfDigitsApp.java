@@ -4,7 +4,7 @@ import ua.com.marami.gojavaonline3.dao.Reader;
 import ua.com.marami.gojavaonline3.util.MyNumber;
 import ua.com.marami.gojavaonline3.view.Writer;
 
-public class Task1 {
+public class MergerOfDigitsApp {
 
 	private static final String WELCOME = "Hello! It is the task #1 from the course \"GoJavaOnline3\". Now we will convert an integer array to String.";
 	private static final String ASK_LENGTH = "Length of array:";
@@ -17,7 +17,7 @@ public class Task1 {
 	private int[] numbers;
 	private String resultedText;
 
-	public Task1(Reader reader, Writer writer) {
+	public MergerOfDigitsApp(Reader reader, Writer writer) {
 		this.reader = reader;
 		this.writer = writer;
 	}

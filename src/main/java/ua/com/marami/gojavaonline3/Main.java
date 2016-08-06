@@ -11,7 +11,7 @@ public class Main {
         Reader reader = new ConsoleReader();
         Writer writer = new ConsoleWriter();
 
-        Task1 task1 = new Task1(reader, writer);
+        MergerOfDigitsApp task1 = new MergerOfDigitsApp(reader, writer);
         task1.run();
     }
 }
