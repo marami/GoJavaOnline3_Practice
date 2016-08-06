@@ -29,8 +29,9 @@ public class MyNumberParametrizedTest {
 		return Arrays.asList(new Object[][]{
 				{new int[]{1}, "1"},
 				{new int[]{1, 10, -2}, "110-2"},
-				{new int[]{0}, "0"},
-				{new int[0], ""}
+				{new int[]{0, 0}, "00"},
+				{new int[0], ""},
+				{new int[]{Integer.MAX_VALUE, Integer.MIN_VALUE}, "2147483647-2147483648"}
 		});
 	}
 
