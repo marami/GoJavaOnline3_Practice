@@ -4,4 +4,6 @@ public interface Writer {
 
 	void writeString(String text);
 
+	void writeInt(int number);
+
 }

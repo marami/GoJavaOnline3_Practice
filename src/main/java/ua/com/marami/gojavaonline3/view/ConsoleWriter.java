@@ -6,4 +6,9 @@ public class ConsoleWriter implements Writer {
 	public void writeString(String text) {
 		System.out.println(text);
 	}
+
+	@Override
+	public void writeInt(int number) {
+		System.out.println(number);
+	}
 }
