@@ -22,7 +22,7 @@ public class MyNumberParametrizedTestForNumberToArray {
 	@Parameter(value = 1)
 	public int[] fExpected;
 
-	@Parameters
+	@Parameters(name = "{index}: fInput = {0}")
 	public static Collection<Object[]> getParametrizedData() {
 		return Arrays.asList(new Object[][]{
 				{22, new int[]{2, 2}},
