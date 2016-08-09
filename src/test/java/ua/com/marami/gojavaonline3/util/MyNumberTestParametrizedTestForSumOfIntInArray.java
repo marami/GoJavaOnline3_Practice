@@ -9,7 +9,9 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 @RunWith(value = Parameterized.class)
 public class MyNumberTestParametrizedTestForSumOfIntInArray {
@@ -26,7 +28,7 @@ public class MyNumberTestParametrizedTestForSumOfIntInArray {
 		return Arrays.asList(new Object[][]{
 				{new int[]{1}, 1},
 				{new int[]{0}, 0},
-				{new int[]{1, 0 , -2}, -1},
+				{new int[]{1, 0, -2}, -1},
 				{new int[]{0, 0, 0}, 0}
 //				{new int[]{Integer.MAX_VALUE, Integer.MAX_VALUE}, 0}
 		});
@@ -36,6 +38,7 @@ public class MyNumberTestParametrizedTestForSumOfIntInArray {
 	@Test
 	public void sumOfIntInArray() throws Exception {
 		assertEquals(fExpected, MyNumber.sumOfIntInArray(fInput));
+		assertThat(MyNumber.sumOfIntInArray(fInput), is(fExpected));
 	}
 
 }

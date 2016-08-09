@@ -11,7 +11,8 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 @RunWith(value = Parameterized.class)
 public class MyNumberParametrizedTestForIntArrayToString {
@@ -38,7 +39,7 @@ public class MyNumberParametrizedTestForIntArrayToString {
 
 	@Test
 	public void testIntArrayToString() throws Exception {
-		assertEquals(fExpected, MyNumber.intArrayToString(fInput));
+		assertThat(MyNumber.intArrayToString(fInput), is(fExpected));
 	}
 
 }
