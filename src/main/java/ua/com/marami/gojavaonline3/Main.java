@@ -12,6 +12,6 @@ public class Main {
         Writer writer = new ConsoleWriter();
 
         new MergerOfDigitsApp(reader, writer).run();
-        new SumOfDigits(reader, writer).run();
+        new SumOfDigitsApp(reader, writer).run();
     }
 }

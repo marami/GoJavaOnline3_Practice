@@ -4,7 +4,7 @@ import ua.com.marami.gojavaonline3.dao.Reader;
 import ua.com.marami.gojavaonline3.util.MyNumber;
 import ua.com.marami.gojavaonline3.view.Writer;
 
-public class SumOfDigits {
+public class SumOfDigitsApp {
 
 	private static final String WELCOME = "\nHello! It is the task #2 from the course \"GoJavaOnline3\". Now we will count sum of digits.";
 	private static final String ASK_NUMBER = "Type the number:";
@@ -16,7 +16,7 @@ public class SumOfDigits {
 	private int number;
 	private int sum;
 
-	public SumOfDigits(Reader reader, Writer writer) {
+	public SumOfDigitsApp(Reader reader, Writer writer) {
 		this.reader = reader;
 		this.writer = writer;
 	}
