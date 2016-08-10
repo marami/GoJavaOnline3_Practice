@@ -4,4 +4,6 @@ public interface Reader {
 
 	int getInt();
 
+	void close();
+
 }

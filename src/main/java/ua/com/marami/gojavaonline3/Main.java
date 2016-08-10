@@ -13,5 +13,7 @@ public class Main {
 
         new MergerOfDigitsApp(reader, writer).run();
         new SumOfDigitsApp(reader, writer).run();
+
+        reader.close();
     }
 }
